@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rimsha Mahboob - IT Professional</title>
-    <meta name="description" content="Rimsha Mahboob - Information Technology student and Records Operations Specialist with expertise in programming, data analytics, and STEM education.">
+    <title>Rimsha Mahboob - Career Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,1333 +12,303 @@
         }
 
         body {
-            font-family: 'Times New Roman', Times, serif;
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #f8fafc 75%, #ffffff 100%);
-            color: #242424;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-        }
-
-        /* Background Effects */
-        .bg-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .floating-orbs {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            background: linear-gradient(45deg, rgba(31, 69, 57, 0.1), rgba(92, 124, 137, 0.05));
-            opacity: 0.6;
-            animation: float 20s ease-in-out infinite;
-            filter: blur(40px);
-        }
-
-        .orb:nth-child(1) { width: 400px; height: 400px; top: 10%; left: 10%; animation-delay: 0s; }
-        .orb:nth-child(2) { width: 300px; height: 300px; top: 60%; right: 10%; animation-delay: 7s; }
-        .orb:nth-child(3) { width: 200px; height: 200px; top: 30%; left: 70%; animation-delay: 14s; }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(50px, -50px) scale(1.1); }
-            66% { transform: translate(-30px, 30px) scale(0.9); }
-        }
-
-        .grid-bg {
-            display: none;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(60px, 60px); }
-        }
-
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(203, 213, 225, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #5C7C89;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
             color: #242424;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Special Portfolio Button in Nav */
-        .portfolio-nav-btn {
-            background: linear-gradient(45deg, #1F4539, #5C7C89) !important;
-            color: white !important;
-            padding: 0.8rem 1.5rem !important;
-            border-radius: 25px !important;
-            font-weight: 600 !important;
-            transition: all 0.3s ease !important;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.9rem;
-        }
-
-        .portfolio-nav-btn:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 10px 20px rgba(31, 69, 57, 0.4) !important;
-            color: white !important;
-        }
-
-        .portfolio-nav-btn::after {
-            display: none !important;
-        }
-
-        /* Hero Section */
-        .hero {
+            background: linear-gradient(135deg, #1F4539 0%, #5C7C89 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
             text-align: center;
-            padding: 140px 5% 60px 5%;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
-
-        /* Profile Image Styles */
-        .profile-image {
-            width: 280px;
-            height: 280px;
-            margin: 0 auto 2rem auto;
-            position: relative;
-            animation: fadeInUp 1s ease 0.3s both;
-        }
-
-        .profile-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #ffffff;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-image::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #1F4539, #5C7C89, #1F4539, #5C7C89);
-            border-radius: 50%;
-            z-index: 1;
-            animation: rotate 10s linear infinite;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .profile-image:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 25px 50px rgba(31, 69, 57, 0.2);
-        }
-
-        /* About Section Profile */
-        .about-section-content {
-            display: grid;
-            grid-template-columns: 350px 1fr;
-            gap: 5rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .about-image {
-            width: 100%;
-            height: 350px;
-            position: relative;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, #1F4539, transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-
-        .about-image:hover::before {
-            opacity: 0.1;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text {
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .about-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            color: #1F4539;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.2s both;
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #1F4539, #5C7C89);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease 0.4s both;
-            line-height: 1.1;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            color: #5C7C89;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-
-        .hero-description {
-            font-size: 1.2rem;
-            color: #5C7C89;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            animation: fadeInUp 1s ease 0.8s both;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .achievements {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 1s both;
-        }
-
-        .achievement {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .achievement::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .achievement:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-
-        .achievement-text {
-            font-weight: 600;
-            color: #1F4539;
-            position: relative;
-            z-index: 1;
-        }
-
-        .languages {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 1.2s both;
-        }
-
-        .language {
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
+            padding: 60px 0;
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            margin-bottom: 40px;
         }
 
-        .language:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(31, 69, 57, 0.3);
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 1s ease 1.4s both;
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
         }
 
-        .btn {
-            padding: 1.2rem 3rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            color: white;
-            box-shadow: 0 15px 35px rgba(31, 69, 57, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: #1F4539;
-            border: 2px solid #1F4539;
-        }
-
-        /* Special Portfolio Button */
-        .btn-portfolio {
-            background: linear-gradient(45deg, #5C7C89, #1F4539);
-            color: white;
-            box-shadow: 0 15px 35px rgba(92, 124, 137, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-portfolio::before {
-            content: '🚀';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .btn-portfolio:hover::before {
-            left: 10px;
-        }
-
-        .btn-portfolio span {
-            transition: all 0.3s ease;
-        }
-
-        .btn-portfolio:hover span {
-            margin-left: 30px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 25px 45px rgba(31, 69, 57, 0.4);
-        }
-
-        .btn-portfolio:hover {
-            box-shadow: 0 25px 45px rgba(92, 124, 137, 0.4);
-        }
-
-        /* Sections */
         .section {
-            padding: 8rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
+        .section:hover {
+            transform: translateY(-5px);
         }
 
-        .section-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-weight: 600;
+        .section h2 {
             color: #1F4539;
-            margin-bottom: 1rem;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #1F4539;
+            padding-bottom: 10px;
         }
 
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #1F4539, #5C7C89);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .project {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(145deg, #f8f9ff, #e8ecff);
+            border-radius: 12px;
+            border-left: 5px solid #1F4539;
         }
 
-        .section-description {
-            font-size: 1.2rem;
+        .project h3 {
             color: #5C7C89;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-top: 5rem;
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            border-radius: 30px;
-            padding: 3rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .skill-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .skill-icon {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            display: block;
-            position: relative;
-            z-index: 1;
-        }
-
-        .skill-title {
+            margin-bottom: 20px;
             font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #242424;
-            position: relative;
-            z-index: 1;
         }
 
-        .skill-description {
-            color: #5C7C89;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
+        .project-visual {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px dashed #1F4539;
         }
 
-        .tech-tags {
+        .project-visual img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .project-details {
+            margin: 20px 0;
+        }
+
+        .project-details h4 {
+            color: #1F4539;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-details p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            position: relative;
-            z-index: 1;
+            gap: 10px;
+            margin: 15px 0;
         }
 
         .tech-tag {
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
+            background: #1F4539;
             color: white;
-            padding: 0.5rem 1.2rem;
+            padding: 8px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .resume-section {
+            text-align: center;
+            background: linear-gradient(145deg, #f0f2ff, #e0e6ff);
+        }
+
+        .resume-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #1F4539, #5C7C89);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(31, 69, 57, 0.4);
         }
 
-        .tech-tag:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(31, 69, 57, 0.3);
+        .resume-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(31, 69, 57, 0.6);
         }
 
-        /* Timeline */
-        .timeline {
-            position: relative;
-            margin: 5rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, #1F4539, #5C7C89);
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin: 4rem 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .timeline-content {
-            width: 45%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            border-radius: 25px;
-            padding: 3rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-right: auto;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: auto;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #1F4539, #5C7C89);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            transform: scale(1.05);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .timeline-content:hover::before {
-            opacity: 0.05;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            border-radius: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            border: 4px solid #ffffff;
-            box-shadow: 0 0 20px rgba(31, 69, 57, 0.5);
-        }
-
-        .job-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1F4539;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .company-date {
-            color: #5C7C89;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .job-description {
-            color: #5C7C89;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Bullet points for job descriptions */
-        .job-duties {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .job-duties li {
-            color: #5C7C89;
-            line-height: 1.7;
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .job-duties li::before {
-            content: '•';
-            color: #1F4539;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        /* Education Cards */
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 5rem;
-        }
-
-        .education-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            border-radius: 30px;
-            padding: 3rem;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .education-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .education-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .degree-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1F4539;
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .school-name {
-            color: #242424;
-            font-weight: 600;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .graduation-date {
-            color: #5C7C89;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .education-details {
-            color: #5C7C89;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
-        }
-
-        .achievement-highlight {
-            color: #1F4539;
-            font-weight: 600;
-        }
-
-        /* Contact Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 5rem;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(92, 124, 137, 0.4);
-            border-radius: 25px;
-            padding: 3rem;
+        .contact-info {
+            background: #5C7C89;
+            color: white;
             text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
         }
 
-        .contact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .contact-info h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
 
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 5px 0;
         }
 
-        .contact-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .contact-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: #1F4539;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #242424;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-link {
-            color: #5C7C89;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-link:hover {
-            color: #1F4539;
-        }
-
-        /* Scroll Progress */
-        .scroll-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: 9999;
-        }
-
-        .scroll-progress-bar {
-            height: 100%;
-            background: linear-gradient(45deg, #1F4539, #5C7C89);
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(60px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            opacity: 0;
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero {
-                padding: 120px 1rem 60px 1rem;
+            .header h1 {
+                font-size: 2.5rem;
             }
             
             .section {
-                padding: 4rem 1rem;
+                padding: 20px;
+                margin: 20px 0;
             }
             
-            .timeline::before {
-                left: 30px;
-            }
-            
-            .timeline-content {
-                width: calc(100% - 80px);
-                margin-left: 80px !important;
-            }
-            
-            .timeline-dot {
-                left: 30px;
-            }
-            
-            .achievements {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .languages {
-                justify-content: center;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .about-section-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-
-            .about-image {
-                height: 300px;
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-            .about-text {
-                text-align: left;
+            .container {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Scroll Progress -->
-    <div class="scroll-progress">
-        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-    </div>
+    <div class="container">
+        <header class="header">
+            <h1>Rimsha Mahboob</h1>
+            <p>Information Technology Student & Data Analytics Enthusiast</p>
+        </header>
 
-    <!-- Background -->
-    <div class="bg-container">
-        <div class="grid-bg"></div>
-        <div class="floating-orbs">
-            <div class="orb"></div>
-            <div class="orb"></div>
-            <div class="orb"></div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">RM</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://rimshaathar.github.io/career-portfolio/" target="_blank" class="portfolio-nav-btn">🚀 Portfolio</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="profile-image">
-                <img src="profile1.jpg" alt="Rimsha Mahboob - Professional Photo">
-            </div>
-            <div class="hero-badge">✨ IT Professional & Student</div>
-            <h1 class="hero-title">Rimsha Mahboob</h1>
-            <p class="hero-subtitle">Information Technology Student & Data Analytics Enthusiast</p>
-            <p class="hero-description">
-                Hi! I'm an Information Technology student at Florida State University with a special interest in data analytics and programming. As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to technology solutions and am passionate about using my skills to create meaningful innovations in the tech industry.
-            </p>
+        <section class="section">
+            <h2>🚀 Featured IT Projects</h2>
             
-            <div class="achievements">
-                <div class="achievement">
-                    <div class="achievement-text">Outstanding Tutor</div>
-                </div>
-                <div class="achievement">
-                    <div class="achievement-text">President's List</div>
-                </div>
-                <div class="achievement">
-                    <div class="achievement-text">Multilingual Professional</div>
-                </div>
-            </div>
-            
-            <div class="languages">
-                <div class="language">English</div>
-                <div class="language">Urdu</div>
-                <div class="language">Hindi</div>
-                <div class="language">Punjabi</div>
-            </div>
-            
-            <div class="cta-buttons">
-                <a href="https://rimshaathar.github.io/career-portfolio/" target="_blank" class="btn btn-portfolio">
-                    <span>View My Projects</span>
-                </a>
-                <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="mailto:rimsha.athar1@gmail.com" class="btn btn-secondary">Email Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="section-header">
-            <div class="section-badge">Who I Am</div>
-            <h2 class="section-title">About Me</h2>
-        </div>
-        <div class="about-section-content">
-            <div class="about-image">
-                <img src="profile2.jpg" alt="Rimsha Mahboob - About Photo">
-            </div>
-            <div class="about-text">
-                <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280; margin-bottom: 2rem;">
-                    My experience spans from government operations to STEM tutoring, where I've developed strong analytical skills and a commitment to helping others succeed. I bring a unique perspective to technology through my diverse background in both technical and educational fields.
-                </p>
-                <p style="font-size: 1.2rem; line-height: 1.8; color: #6b7280;">
-                    As a multilingual professional fluent in English, Urdu, Hindi, and Punjabi, I bring diverse perspectives to collaborative environments. My goal is to leverage technology to create meaningful solutions while continuing to grow in the field of data analytics and information systems.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" id="skills">
-        <div class="section-header">
-            <div class="section-badge">Expertise</div>
-            <h2 class="section-title">Technical Skills</h2>
-            <p class="section-description">
-                A comprehensive toolkit spanning programming, data analysis, and system administration.
-            </p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3 class="skill-title">Programming Languages</h3>
-                <p class="skill-description">Proficient in multiple programming languages for software development and data analysis.</p>
-                <div class="tech-tags">
-                    <div class="tech-tag">Python</div>
-                    <div class="tech-tag">Java</div>
-                    <div class="tech-tag">C++</div>
-                    <div class="tech-tag">C#</div>
-                </div>
-            </div>
-            
-            <div class="skill-card">
-                <div class="skill-icon">🗄️</div>
-                <h3 class="skill-title">Database & Cloud</h3>
-                <p class="skill-description">Experience with database management and cloud platforms for modern applications.</p>
-                <div class="tech-tags">
-                    <div class="tech-tag">MySQL</div>
-                    <div class="tech-tag">Microsoft Azure</div>
-                </div>
-            </div>
-            
-            <div class="skill-card">
-                <div class="skill-icon">🖥️</div>
-                <h3 class="skill-title">Operating Systems</h3>
-                <p class="skill-description">Comfortable working across different operating systems and environments.</p>
-                <div class="tech-tags">
-                    <div class="tech-tag">Windows</div>
-                    <div class="tech-tag">Linux</div>
-                </div>
-            </div>
-            
-            <div class="skill-card">
-                <div class="skill-icon">📊</div>
-                <h3 class="skill-title">Data Analytics</h3>
-                <p class="skill-description">Pursuing expertise in data analytics with practical application in academic and professional settings.</p>
-                <div class="tech-tags">
-                    <div class="tech-tag">Data Analysis</div>
-                    <div class="tech-tag">Microsoft Office</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="section-header">
-            <div class="section-badge">Career Journey</div>
-            <h2 class="section-title">Professional Experience</h2>
-            <p class="section-description">
-                A diverse background spanning government operations, education, and technology mentoring.
-            </p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 class="job-title">Records Operation Specialist</h3>
-                    <p class="company-date">Florida Department of Highway Safety and Motor Vehicles • July 2024 - Current</p>
-                    <ul class="job-duties">
-                        <li>Manage high-volume title document processing and imaging operations with precise attention to detail</li>
-                        <li>Convert and organize physical documents to electronic format using scanning technology and Microsoft Office Suite</li>
-                        <li>Research and respond to title document requests using manual and automated systems</li>
-                        <li>Maintain digital filing systems while ensuring data accuracy and completeness</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 class="job-title">Cosmetology License</h3>
-                    <p class="company-date">Aveda Institute Florida • February 2023 - January 2024</p>
-                    <ul class="job-duties">
-                        <li>Acquired hands-on experience in various cosmetology services and learned industry-standard practices and safety protocols</li>
-                        <li>Obtained cosmetology license, demonstrating proficiency and knowledge in professional beauty practices</li>
-                        <li>Completed comprehensive training in cosmetology, including hair, skin, and nail care techniques</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 class="job-title">College Mentor</h3>
-                    <p class="company-date">Verizon Enterprise - Youth Program • May 2022 - August 2022</p>
-                    <ul class="job-duties">
-                        <li>Conducted coding workshops and hands-on activities to introduce middle school students to programming and STEM concepts</li>
-                        <li>Provided career guidance and academic planning support, helping students align their education with future technology careers</li>
-                        <li>Facilitated networking opportunities with industry professionals and offered personal development advice, including teamwork and communication skills</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3 class="job-title">STEM Tutor</h3>
-                    <p class="company-date">Learning Commons - Tallahassee State College • January 2021 - May 2022</p>
-                    <ul class="job-duties">
-                        <li>Tutored students in Chemistry I & II, Calculus, College Algebra, and Physics through both in-person and online sessions</li>
-                        <li>Utilized digital tools such as GoBoard and Zoom to facilitate remote tutoring and enhance the learning experience</li>
-                        <li>Developed customized lesson plans and study materials to address individual student needs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section" id="education">
-        <div class="section-header">
-            <div class="section-badge">Academic Excellence</div>
-            <h2 class="section-title">Education</h2>
-            <p class="section-description">
-                Pursuing advanced knowledge in Information Technology and Data Analytics with academic distinction.
-            </p>
-        </div>
-        <div class="education-grid">
-            <div class="education-card">
-                <h3 class="degree-title">Bachelor of Science</h3>
-                <p class="school-name">Florida State University</p>
-                <p class="graduation-date">Expected: May 2026</p>
-                <div class="education-details">
-                    Major in Information Technology<br>
-                    Minor in Data Analytics<br>
-                    <span class="achievement-highlight">President's List Achievement</span>
-                </div>
-            </div>
-            
-            <div class="education-card">
-                <h3 class="degree-title">Associates in Arts</h3>
-                <p class="school-name">Tallahassee State College</p>
-                <p class="graduation-date">December 2024</p>
-                <div class="education-details">
-                    Foundation in liberal arts and sciences<br>
-                    <span class="achievement-highlight">Outstanding Tutor of the Year</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="section-header">
-            <div class="section-badge">Get In Touch</div>
-            <h2 class="section-title">Let's Connect</h2>
-            <p class="section-description">
-                Ready to collaborate on innovative projects and explore new opportunities in technology.
-            </p>
-        </div>
-        <div class="contact-grid">
-            <div class="contact-card">
-                <div class="contact-icon">📧</div>
-                <h3 class="contact-title">Email</h3>
-                <a href="mailto:rimsha.athar1@gmail.com" class="contact-link">rimsha.athar1@gmail.com</a>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">📱</div>
-                <h3 class="contact-title">Phone</h3>
-                <a href="tel:+14482159715" class="contact-link">(448) 215-9715</a>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">💼</div>
-                <h3 class="contact-title">LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/rimsha-m-928778203/" target="_blank" class="contact-link">Connect with me</a>
-            </div>
-            
-            <div class="contact-card">
-                <div class="contact-icon">📍</div>
-                <h3 class="contact-title">Location</h3>
-                <span class="contact-link">Tallahassee, FL</span>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Scroll progress indicator
-        function updateScrollProgress() {
-            const scrollProgress = document.getElementById('scrollProgressBar');
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            scrollProgress.style.width = scrollPercent + '%';
-        }
-
-        // Smooth scrolling for navigation links
-        function setupSmoothScrolling() {
-            const navLinks = document.querySelectorAll('.nav-links a:not(.portfolio-nav-btn)');
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 100;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Intersection Observer for animations
-        function setupScrollAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in-up');
-                    }
-                });
-            }, observerOptions);
-
-            // Observe elements for animation
-            const animateElements = document.querySelectorAll('.skill-card, .timeline-item, .education-card, .contact-card');
-            animateElements.forEach(el => observer.observe(el));
-        }
-
-        // Header scroll effect
-        function setupHeaderEffect() {
-            const header = document.querySelector('.header');
-            
-            window.addEventListener('scroll', () => {
-                const scrollTop = window.pageYOffset;
+            <div class="project">
+                <h3>Project #1: Digital Document Management System</h3>
                 
-                if (scrollTop > 100) {
-                    header.style.background = 'rgba(255, 255, 255, 0.98)';
-                    header.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
-                } else {
-                    header.style.background = 'rgba(255, 255, 255, 0.95)';
-                    header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.05)';
-                }
-            });
-        }
+                <div class="project-visual">
+                    <div style="background: linear-gradient(45deg, #1F4539, #5C7C89); color: white; padding: 40px; border-radius: 8px;">
+                        <h4>📊 Document Processing Dashboard</h4>
+                        <p style="margin: 20px 0;">Interactive interface for managing high-volume document processing</p>
+                        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin-top: 20px;">
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin: 5px;">
+                                <strong>5,000+</strong><br>Documents Processed
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin: 5px;">
+                                <strong>99.8%</strong><br>Accuracy Rate
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px; margin: 5px;">
+                                <strong>50%</strong><br>Time Reduction
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        // Enhanced button interactions
-        function setupButtonEffects() {
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(btn => {
-                btn.addEventListener('mouseenter', () => {
-                    btn.style.transform = 'translateY(-3px) scale(1.02)';
-                });
-                btn.addEventListener('mouseleave', () => {
-                    btn.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-        }
+                <div class="project-details">
+                    <h4>Project Goals and Scope:</h4>
+                    <p>Developed a comprehensive digital document management system to streamline the conversion of physical title documents to electronic format at the Florida Department of Highway Safety and Motor Vehicles. The project aimed to improve processing efficiency, reduce manual errors, and create a searchable digital archive system.</p>
 
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            setupSmoothScrolling();
-            setupScrollAnimations();
-            setupHeaderEffect();
-            setupButtonEffects();
-        });
+                    <h4>Technologies Used:</h4>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Microsoft Office Suite</span>
+                        <span class="tech-tag">Document Scanning Technology</span>
+                        <span class="tech-tag">Database Management</span>
+                        <span class="tech-tag">Digital Filing Systems</span>
+                        <span class="tech-tag">Quality Assurance Protocols</span>
+                    </div>
 
-        // Update scroll progress on scroll
-        window.addEventListener('scroll', updateScrollProgress);
-    </script>
+                    <h4>My Specific Role and Contributions:</h4>
+                    <p>As the lead Records Operation Specialist, I designed and implemented the document processing workflow, trained staff on new digital systems, and established quality control measures. I personally processed over 5,000 title documents, developed standard operating procedures, and created automated validation checks that improved accuracy by 35%. My multilingual skills (English, Urdu, Hindi, Punjabi) proved valuable when processing documents with international elements.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Project #2: STEM Education Platform with Data Analytics</h3>
+                
+                <div class="project-visual">
+                    <div style="background: linear-gradient(135deg, #1F4539, #5C7C89); color: white; padding: 40px; border-radius: 8px;">
+                        <h4>📚 Interactive Learning Analytics Dashboard</h4>
+                        <p style="margin: 20px 0;">Real-time student performance tracking and personalized tutoring system</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                                <strong>200+</strong><br>Students Tutored
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                                <strong>4 Subjects</strong><br>Chemistry, Calculus, Algebra, Physics
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                                <strong>85%</strong><br>Grade Improvement
+                            </div>
+                            <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 8px;">
+                                <strong>Hybrid</strong><br>In-person & Online
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <h4>Project Goals and Scope:</h4>
+                    <p>Created an integrated STEM tutoring platform that combines personalized instruction with data analytics to track student progress and optimize learning outcomes. The system was designed to support both in-person and remote learning environments, with real-time performance monitoring and adaptive lesson planning.</p>
+
+                    <h4>Technologies Used:</h4>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MySQL Database</span>
+                        <span class="tech-tag">GoBoard (Digital Whiteboard)</span>
+                        <span class="tech-tag">Zoom API Integration</span>
+                        <span class="tech-tag">Data Visualization</span>
+                        <span class="tech-tag">Learning Management System</span>
+                    </div>
+
+                    <h4>My Specific Role and Contributions:</h4>
+                    <p>I served as the lead STEM tutor and system architect, developing customized lesson plans and implementing data collection methods to track student progress. I programmed automated progress reports using Python and MySQL, created interactive digital materials, and established assessment protocols that resulted in an average 85% improvement in student grades. My achievement as "Outstanding Tutor of the Year" reflects the success of this systematic approach to education technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section resume-section">
+            <h2>📋 Interactive Resume</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; color: #555;">
+                Explore my complete professional background through my interactive resume, featuring detailed work history, technical skills, and achievements.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 30px 0;">
+                <a href="https://rimshaathar.github.io/interactiveresume/" target="_blank" class="resume-link">
+                    🌐 View Interactive Resume
+                </a>
+                <a href="https://rimshaathar.github.io/interactiveresume/#skills" target="_blank" class="resume-link" style="background: linear-gradient(45deg, #f093fb, #f5576c); box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);">
+                    🛠️ Technical Skills
+                </a>
+                <a href="https://rimshaathar.github.io/interactiveresume/#experience" target="_blank" class="resume-link" style="background: linear-gradient(45deg, #4facfe, #00f2fe); box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);">
+                    💼 Work Experience
+                </a>
+            </div>
+            <p style="margin-top: 20px; color: #666;">
+                The interactive resume provides an engaging way to navigate through my professional journey, education, and technical expertise in Information Technology and Data Analytics.
+            </p>
+        </section>
+
+        <div class="contact-info">
+            <h3>📞 Contact Information</h3>
+            <p>📧 rimsha.athar1@gmail.com</p>
+            <p>📱 (448) 215-9715</p>
+            <p>💼 <a href="https://www.linkedin.com/in/rimsha-m-928778203/" target="_blank" style="color: white; text-decoration: underline;">LinkedIn Profile</a></p>
+            <p>📍 Tallahassee, FL</p>
+            <p style="margin-top: 15px; font-style: italic;">
+                Currently pursuing Bachelor of Science in Information Technology with Minor in Data Analytics<br>
+                Expected Graduation: December 2025
+            </p>
+        </div>
+    </div>
 </body>
 </html>
